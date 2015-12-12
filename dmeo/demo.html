@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+<head>
+    <script type="text/javascript" src='http://apps.bdimg.com/libs/angular.js/1.3.9/angular.min.js'></script>
+</head>
+
+<body>
+    <h3>写在前面的话</h3>
+    <div>
+        <pre>
+
+                                                angularjs简介
+
+AngularJS是为了克服HTML在构建应用上的不足而设计的，是一个用于设计动态web应用的javascript结构框架（区别于类库）。能够像backbone一样提供一整套方案用于设计web应用。
+
+HTML是一门很好的为静态文本展示设计的声明式语言，但要构建WEB应用的话它就显得乏力了。通常，我们是通过以下技术来解决静态网页技术在构建动态应用上的不足：
+
+1）类库 - 类库是一些函数的集合，它能帮助你写WEB应用。起主导作用的是你的代码，由你来决定何时使用类库。类库有：jQuery等。
+2）框架 - 框架是一种特殊的、已经实现了的WEB应用，你只需要对它填充具体的业务逻辑。这里框架是起主导作用的，由它来根据具体的应用逻辑来调用你的代码。框架有：knockout、sproutcore等。
+
+AngularJS使用了不同的方法，它尝试去补足HTML本身在构建应用方面的缺陷。AngularJS通过使用我们称为标识符(directives)的结构，让浏览器能够识别新的语法。例如：
+    使用双大括号{{}}语法进行数据绑定；
+    使用DOM控制结构来实现迭代或者隐藏DOM片段；
+    支持表单和表单的验证；
+    能将逻辑代码关联到相关的DOM元素上；
+    能将HTML分组成可重用的组件。
+AngularJS是一个开源的web应用框架，由Google和社区进行维护，它可以创建单页的应用程序，一个页面的应用仅仅需要HTML,CSS和JavaScript在客户端。它的目标是增强页面的模型-视图-控制（MVC）的功能，为简化开发和测试。
+它通过双向数据绑定使你的UI（视图层）与你的JavaScript对象（层模型层）的数据自动同步。帮助你更好的构建你的应用和更方便的测试，AngularJs告诉浏览器如何依赖注入和控制反转。它帮助改良了允许异步回调和延迟、使客户端导航和深层链接使用哈希bang格式地址和HTML5 pushStat与服务端通信更容易。
+
+Angular 提供了：
+    结构模型的引入（MVC,SPA等）;
+    增强HTML支持新特性;
+    避免直接DOM操作来避免很难调试不可追踪的代码;
+    包含低耦合和高可复用性;
+    应用程序内部规则测试;
+    视图模板更接近服务器端模板;
+设计初衷:
+    将DOM操作从应用中解耦. 增强了可测试性.
+    应用测试性与开发代码同样重要. 测试的复杂程度与代码的设计结构强相关.
+    客户端与服务端解耦. 实现了并发处理机制增强了代码复用性.
+    在开发全过程中作出指引: 从UI到业务逻辑最终到测试环节.
+
+
+
+
+                                                angularjs关键特性
+1）双向数据绑定:
+　　数据绑定可能是AngularJS里最酷，最实用的功能。 它将节省你大量的样板代码编写。 一个典型的Web应用程序可以包含多达80％的代码基础，如遍历，操作，并听取了监听DOM。 数据绑定使得不用编写这些代码，这样你就可以专注于你的应用程序。
+2）模板
+　　在AngularJS，模板就是原生的HTML. 做了基于视图的增强. 这样做最大的好处在于拉近了开发与设计人员的工作流. 设计人员操作HTML完成设计，开发直接在HTML上作相应的功能开发。
+3）MVC
+　　AngularJS引入了软件设计的MVC模式.这对于使用者来说仁者见仁智者见智. AngularJS并不是完全的MVC而是 MVVM (Model-View-ViewModel).
+4）依赖注入
+　　AngularJS 提供了依赖注入的子系统帮助开发人员降低开发复杂度，提高测试效率.依赖注入将业务代码与配置实现解耦，提高了代码的可测性. 
+　　有了DI,无需每次都创建指定的对象依赖关系及后面配置. 这样就能按需分配而无需自己制定或是查找. 就像要说一句"Hey I need X',DI就会帮你创建并发送给你.
+
+采用依赖注入后能体验到的好处主要包括:
+代码更易于维护。
+API更为简练和抽象。
+代码更易于测试。
+代码更加模块化、可复用性更强。
+5）指令
+　　指令可以被用来创建自定义的HTML标签，这些标签可以用作新的自定义的控件。它们也可以用来"渲染"有一定行为的元素，也可以以一些有趣的方式来操作DOM属性。一个指令就是一个能引入新语法的东西。把分离的组件组合成一个组件，这种创建应用的方式将使得添加、修改和删除页面功能变得异常简单。指令是AngularJS的一个非常强大且独有的特性。
+
+　　从更高的层次说,  DOM 元素上的指令 (像是属性，元素名，注释或是 CSS ) 等给 AngularJS's HTML 编译器传递的数据($compile) 从而传递指定的功能到DOM元素或是子元素。
+
+　　Angular 有很多这样的内置指令，像是 ngBind, ngModel, 和ngView.Y还能自定义指令，当Angular启动后HTML编译器就会自动建立DOM元素的指令映射.
+6）测试
+　　AngularJS 意识到凡是js写的代码需要加强测试. 这在 AngularJS 设计之初就有了, 于是Angular的可测试性不言而喻.
+　　JS是解释性的动态语言，设计相应的测试决不可小觑.
+　　AngularJS 完全基于可测的根基设计出来的. 它提供了端到端的单元测试.
+摘自：http://www.admin10000.com/document/5121.html
+
+
+模块定义了一个应用程序。
+模块是应用程序中不同部分的容器。
+模块是应用控制器的容器。
+控制器通常属于一个模块。
+
+问题：函数会影响到全局命名空间
+大家应该经常性的会看到这句话，“JavaScript 中应避免使用全局函数”。因为他们很容易被其他脚本文件覆盖。
+AngularJS 模块让所有函数的作用域在改模块下，避免了该问题。
+
+模块的定义
+var app = angular.module("myApp", []);s
+在模块定义中 [] 参数用于定义模块的依赖关系。
+中括号[]表示该模块没有依赖，如果有依赖的话会在中括号写上依赖的模块名字。
+
+什么时候载入库?
+对于 HTML 应用程序，通常建议把所有的脚本都放置在 <body> 元素的最底部。
+这会提高网页加载速度，因为 HTML 加载不受制于脚本加载。
+在 <body> 元素中加载 AngularJS 库，必须放置在您的 AngularJS 脚本前面：
+        </pre>
+    </div>
+    <hr>
+    <h3>demo1 双向数据绑定</h3> Your name:
+    <input type="text" ng-model="yourname" placeholder="World"> Hello {{yourname || 'World'}}!
+    <hr>
+    <h3>demo2 ng-repeat循环输出</h3>
+    <div ng-app="" ng-init="name=[11,22,33]">
+        <p>循环对象</p>
+        <ul>
+            <li ng-repeat="i in name">{{i}}</li>
+        </ul>
+    </div>
+    <hr>
+    <h3>demo3 控制器双向数据绑定</h3>
+    <div ng-controller="funcf">
+        姓
+        <input type="text" ng-model="firstname" /> 名
+        <input type="text" ng-model="lastname" />
+        <br /> name:{{ firstname +" "+ lastname }}
+    </div>
+    <script>
+    var myapp = angular.module('myapp', []);
+    myapp.controller('funcf', function funcf($scope) {
+        $scope.firstname = "X";
+        $scope.lastname = "y";
+    });
+    </script>
+    <hr>
+    <h3>demo4 过滤器</h3>
+    <div>
+        转换成小写<input type="text" ng-model="enter">{{enter | lowercase}}<br /><br />
+        <!-- lowercase小写 uppercase大写 currency格式化数字为货币格式
+             filter从数组项中选择一个子集 orderBy根据某个表达式排列数组 -->
+        向指令添加过滤器
+            <input type="text" ng-model="test">模型test作为过滤关键字
+            <ul ng-init=" names = [{name:'b'},{name:'a'},{name:'c'}] ">
+                <li ng-repeat="i in names | filter:test | orderBy:'name' " >{{ $index +" "+i.name | uppercase}}</li><!-- $index应该是内置索引  -->
+            </ul>
+    </div>
+    <hr>
+    <h3>demo5 http</h3>
+    <div ng-controller="httpDemo">
+        <ul>
+            <li ng-repeat="i in names">{{i.Names}}</li>
+        </ul>
+        <script>
+            myapp.controller('httpDemo',function($scope,$http){
+                var httpObj = $http.get("http://www.runoob.com/try/angularjs/data/Customers_JSON.php");
+                //这里当然会报错，因为这是w3cschool的例子，不是我自己的域名，受到js同源策略限制
+                httpObj.success(function(response){
+                    $scope.names = response.records;
+                    console.log($scope);
+                });
+            });
+        </script>
+    </div>
+     <hr>
+    <h3>demo6 html DOM</h3>
+    <div ng-init="mySwitch=true">
+        <p><button ng-disabled="mySwitch">点一下</button></p>
+        <p><input type="checkbox" ng-model="mySwitch">选择</p>{{ mySwitch }}
+        <!-- ng-disabled 指令绑定应用程序数据 "mySwitch" 到 HTML 的 disabled 属性。
+             ng-model 指令绑定 "mySwitch" 到 HTML input checkbox 元素的内容（value）。
+         -->
+         <br /><br />
+         ng-show
+         <p ng-show="true">你看得见我，看不见我兄弟</p>
+         <p ng-show="false">你看不见我，看得见我弟兄</p>
+         ng-hide
+         <p ng-hide="true">你看得见我，看不见我兄弟</p>
+         <p ng-hide="false">你看不见我，看得见我弟兄</p>
+    </div>
+    <hr>
+    <h3>demo7 事件</h3>
+    <div ng-init="count = 0">
+        <input type="button" ng-click="count = count + 1"value="计数器"/><!-- 发现不能写为count+=1  -->
+        <p> {{count}} </p>
+    </div>
+</body>
+</html>
