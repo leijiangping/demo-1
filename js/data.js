@@ -1,4 +1,4 @@
-jsondata = {
+{
 	"title": "10086网状流程",
 	"nodes": {
 		"demo_node_9": {
@@ -10,7 +10,7 @@ jsondata = {
 			"height": 24,
 			"alt": true
 		},
-		//alt表示在编辑模式下是否被用户变更过,默认都是undefined未变更//exportAlter
+		
 		"demo_node_10": {
 			"name": "桂北区",
 			"left": 10,
@@ -456,4 +456,4 @@ jsondata = {
 		}
 	},
 	"initNum": 61
-};
+}

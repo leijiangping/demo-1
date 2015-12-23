@@ -23,9 +23,10 @@ angular.module('app',[])
 				haveHead: true,
 				headBtns: ["new", "open", "save", "undo", "redo", "reload"], //如果haveHead=true，则定义HEAD区的按钮
 				haveGroup: true,
-				useOperStack: false,
+				useOperStack: true,
 				headLabel:true
 			};
+			/*remark工具栏提示*/
 			var remark = {
 				cursor: "选择指针",
 				direct: "结点连线",
@@ -41,9 +42,42 @@ angular.module('app',[])
 				recombination: "复合结点",
 				group: "组织划分框编辑开关"
 			};
+			/*
+			 * 创建图类$.createGooFlow
+			 * prams1{element}元素节点
+			 * prams2{property}配置对象
+			 * 
+			 * 工具栏提示信息setNodeRemarks
+			 * prams{remark}提示信息对象
+			 * */
 			var gooflow = $.createGooFlow($element,property)
 			gooflow.setNodeRemarks(remark);
-			gooflow.loadData(jsondata);
+			/*
+			 * loadDataAjax
+			 * prams{para}
+			 * para.type 必须 请求类型
+			 * para.data 非必须  参数
+			 * para.error 非必须  错误处理
+			 * para.success  非必须  
+			 * para.dataFilter 非必须 数据过滤
+			 * 
+			 * */
+			var para = {
+				type: 'get',
+				url: 'js/data.js',
+				data: {},
+				error: function(errorText,errorThrown){
+					console.log(errorText);
+					console.log(errorThrown);
+				},
+				dataFilter:function(){
+					
+				},
+				success:function(){
+					
+				}
+			};
+			gooflow.loadDataAjax(para);
 		}
 	};
 })
