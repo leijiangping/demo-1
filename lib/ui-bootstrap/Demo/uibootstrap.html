@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>封装成指令的弹出框演示</title>
+<link rel="stylesheet" href="../bootstrap.css">
+<script src="../../angularJS-v1.3.9/angular.js"></script>
+<script src="../ui-bootstrap-tpls-0.12.1.min.js"></script>
+<script src="example.js"></script>
+<style>
+.confirmProNameDlg .modal-sm{
+    border-top: 4px solid #08a1ef;
+    border-bottom: 2px solid #08a1ef;
+    color: #08a1ef;
+}
+.confirmProNameDlg .modal-content{
+    height: 160px;
+    border-radius: 0;
+    border: 1px solid #fff;
+}
+.confirmProNameDlg .modal-dialog {
+    margin: 150px auto;
+}
+.confirmProNameDlg .head{
+    font-size: 20px;
+    padding-bottom: 5px;
+    font-weight: bolder;
+    margin: 8px 0 2px 10px;
+}
+.confirmProNameDlg hr{
+    margin: 0;
+}
+.confirmProNameDlg .content{
+    margin: 20px auto;
+    text-align: center;
+    font-size: 17px;
+    color: #08a1ef;
+    ont-family: 'Microsoft YaHei', Tahoma, Helvetica, Arial, sans-serif;
+}
+.confirmProNameDlg .footer {
+    width: 100%;
+    height: 35px;
+    margin: 13px 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.confirmProNameDlg .confirm {
+    float: right;
+    padding: 10px 10px;
+    text-align: center;
+    line-height: 15px;
+    color: #fff;
+    height: 35px;
+    cursor: pointer;
+    width: 90px;
+    display: inline-block;
+    background-color: #08a1ef;
+    border-radius: 4px;
+    margin-left: 20px;
+    font-family: 'Microsoft YaHei', Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.confirmProNameDlg .confirm:hover {
+    background-color: #82c924;
+}
+
+.confirmProNameDlg .confirm span {
+    color: #FFF;
+}
+
+.confirmProNameDlg .cancel {
+    float: right;
+    padding: 10px 10px;
+    text-align: center;
+    line-height: 15px;
+    color: #fff;
+    height: 35px;
+    cursor: pointer;
+    width: 90px;
+    display: inline-block;
+    background-color: #9DD0EA;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-family: 'Microsoft YaHei', Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.confirmProNameDlg .cancel:hover {
+    background-color: #9CCB5C;
+}
+
+.confirmProNameDlg .cancel span {
+    color: #FFF;
+}
+</style>
+</head>
+<body>
+	<div class="bg"></div>
+	<div class="container" ng-controller="myController">
+		<!--<button class="btn btn-primary ziti" ng-click="showPop()">弹框</button>-->
+		<div class="buttons">
+			<a href="#" class="demo" ng-click="open()">button</a>
+		</div>
+
+		<div ng-show="selected">
+			<h1>Selection from a modal: {{ selected }}</h1>
+		</div>
+	</div>
+</body>
+</html>
