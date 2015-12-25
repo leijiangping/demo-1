@@ -7,21 +7,24 @@
 		<!--[if lt IE 9]>
 <?import namespace="v" implementation="#default#VML" ?>
 <![endif]-->
-		<link rel="stylesheet" type="text/css" href="css/GooFlow2.css" />
+		<link rel="stylesheet" href="lib/ui-bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="gooflow/css/GooFlow2.css" />
 	</head>
 
 	<body>
-		<div>
+		<div ng-controller="myCtrl">
 			<div goo-flow></div>
 		</div>
 
-		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-		<script type="text/javascript" src="dmeo/angular-1.3.0.js" ></script>
-		<script type="text/javascript" src="js/GooFunc.js"></script>
-		<script type="text/javascript" src="js/GooFlow.js"></script>
+		<script type="text/javascript" src="lib/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="lib/angularJS-v1.3.9/angular.js" ></script>
+		
+		<script type="text/javascript" src="lib/ui-bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+		<script type="text/javascript" src="lib/GooFunc.js"></script>
+		<script type="text/javascript" src="lib/GooFlow.js"></script>
 		<!--<script type="text/javascript" src="js/GooFlow_color.js" ></script>-->
 		<!--<script type="text/javascript" src="js/data.js" ></script>-->
-		<script type="text/javascript" src="directivedemo/gooflow.js"></script>
+		<script type="text/javascript" src="gooflow/directive/gooflow.js"></script>
 	</body>
 
 </html>
