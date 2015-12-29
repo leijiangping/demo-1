@@ -1,5 +1,5 @@
 {
-	"title": "10086网状流程",
+
 	"nodes": {
 		"demo_node_9": {
 			"name": "桂中区",

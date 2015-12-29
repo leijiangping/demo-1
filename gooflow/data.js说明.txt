@@ -1,0 +1,29 @@
+data.js说明
+
+title:流程图标题
+nodes:节点
+	-name:节点名称
+	-left:定位
+	-top:定位
+	-type:start round开始节点/end round结束节点/task round任务节点/node自动节点/chat决策节点/
+			state状态节点/plug附加插件/join联合节点/fork分支节点/recombination复合节点
+	-alt:布尔值,表示在编辑模式下是否被用户变更过,默认都是undefined未变更
+
+lines:连线
+	-name:显示名称
+	-from:连线开始节点的id
+	-to:连线结束节点的id
+	-type:连线类型  sl直线/lr中段可左右移动的折线/tb中段可上下移动的折线
+	-M:当type="lr"时,为中段的相对于工作区的X坐标值,当type="tb"时,为中段的相对于工作区的Y坐标值
+	-marked:布尔值,表示是否已被用橙色标注
+	-alt:布尔值,表示在编辑模式下是否被用户变更过,默认都是undefined未变更
+	
+area:分组
+	-name:显示名称
+	-left：定位
+	-top：定位
+	-width：分组宽度
+	-height：分组高度
+	-color：分组颜色，有red/yellow/blue/green四种
+	-alt:布尔值,表示在编辑模式下是否被用户变更过,默认都是undefined未变更
+
